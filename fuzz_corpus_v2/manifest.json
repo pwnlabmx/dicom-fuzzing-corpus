@@ -1,0 +1,3266 @@
+{
+  "author": "Paulino Calderon",
+  "generator_version": "1.0",
+  "generated_at": "2026-04-01T17:42:42.314013+00:00",
+  "seed": 42,
+  "total_cases": 354,
+  "baseline_file": "baseline/BASELINE_valid_ct.dcm",
+  "categories": [
+    {
+      "id": "cat01",
+      "name": "cat01_tag_overflow",
+      "case_count": 115,
+      "cases": [
+        {
+          "id": "TC0002",
+          "filename": "cat01_tag_overflow/TC0001_patientname_exact_max.dcm",
+          "description": "PatientName at max length (64 chars)",
+          "target_tag": "(0010,0010)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0004",
+          "filename": "cat01_tag_overflow/TC0003_patientname_over_1.dcm",
+          "description": "PatientName maxlen+1",
+          "target_tag": "(0010,0010)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0006",
+          "filename": "cat01_tag_overflow/TC0005_patientname_over_2x.dcm",
+          "description": "PatientName 2\u00d7 maxlen",
+          "target_tag": "(0010,0010)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0008",
+          "filename": "cat01_tag_overflow/TC0007_patientname_over_10x.dcm",
+          "description": "PatientName 10\u00d7 maxlen",
+          "target_tag": "(0010,0010)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0010",
+          "filename": "cat01_tag_overflow/TC0009_patientname_over_64KB.dcm",
+          "description": "PatientName value = 64KB",
+          "target_tag": "(0010,0010)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0012",
+          "filename": "cat01_tag_overflow/TC0011_patientname_empty.dcm",
+          "description": "PatientName empty string",
+          "target_tag": "(0010,0010)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0014",
+          "filename": "cat01_tag_overflow/TC0013_patientname_len1.dcm",
+          "description": "PatientName single char",
+          "target_tag": "(0010,0010)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0016",
+          "filename": "cat01_tag_overflow/TC0015_patientid_exact_max.dcm",
+          "description": "PatientID at max length (64 chars)",
+          "target_tag": "(0010,0020)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0018",
+          "filename": "cat01_tag_overflow/TC0017_patientid_over_1.dcm",
+          "description": "PatientID maxlen+1",
+          "target_tag": "(0010,0020)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0020",
+          "filename": "cat01_tag_overflow/TC0019_patientid_over_2x.dcm",
+          "description": "PatientID 2\u00d7 maxlen",
+          "target_tag": "(0010,0020)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0022",
+          "filename": "cat01_tag_overflow/TC0021_patientid_over_10x.dcm",
+          "description": "PatientID 10\u00d7 maxlen",
+          "target_tag": "(0010,0020)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0024",
+          "filename": "cat01_tag_overflow/TC0023_patientid_over_64KB.dcm",
+          "description": "PatientID value = 64KB",
+          "target_tag": "(0010,0020)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0026",
+          "filename": "cat01_tag_overflow/TC0025_patientid_empty.dcm",
+          "description": "PatientID empty string",
+          "target_tag": "(0010,0020)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0028",
+          "filename": "cat01_tag_overflow/TC0027_patientid_len1.dcm",
+          "description": "PatientID single char",
+          "target_tag": "(0010,0020)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0030",
+          "filename": "cat01_tag_overflow/TC0029_accessionnumber_exact_max.dcm",
+          "description": "AccessionNumber at max length (16 chars)",
+          "target_tag": "(0008,0050)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0032",
+          "filename": "cat01_tag_overflow/TC0031_accessionnumber_over_1.dcm",
+          "description": "AccessionNumber maxlen+1",
+          "target_tag": "(0008,0050)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0034",
+          "filename": "cat01_tag_overflow/TC0033_accessionnumber_over_2x.dcm",
+          "description": "AccessionNumber 2\u00d7 maxlen",
+          "target_tag": "(0008,0050)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0036",
+          "filename": "cat01_tag_overflow/TC0035_accessionnumber_over_10x.dcm",
+          "description": "AccessionNumber 10\u00d7 maxlen",
+          "target_tag": "(0008,0050)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0038",
+          "filename": "cat01_tag_overflow/TC0037_accessionnumber_over_64KB.dcm",
+          "description": "AccessionNumber value = 64KB",
+          "target_tag": "(0008,0050)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0040",
+          "filename": "cat01_tag_overflow/TC0039_accessionnumber_empty.dcm",
+          "description": "AccessionNumber empty string",
+          "target_tag": "(0008,0050)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0042",
+          "filename": "cat01_tag_overflow/TC0041_accessionnumber_len1.dcm",
+          "description": "AccessionNumber single char",
+          "target_tag": "(0008,0050)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0044",
+          "filename": "cat01_tag_overflow/TC0043_studydescription_exact_max.dcm",
+          "description": "StudyDescription at max length (64 chars)",
+          "target_tag": "(0008,1030)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0046",
+          "filename": "cat01_tag_overflow/TC0045_studydescription_over_1.dcm",
+          "description": "StudyDescription maxlen+1",
+          "target_tag": "(0008,1030)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0048",
+          "filename": "cat01_tag_overflow/TC0047_studydescription_over_2x.dcm",
+          "description": "StudyDescription 2\u00d7 maxlen",
+          "target_tag": "(0008,1030)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0050",
+          "filename": "cat01_tag_overflow/TC0049_studydescription_over_10x.dcm",
+          "description": "StudyDescription 10\u00d7 maxlen",
+          "target_tag": "(0008,1030)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0052",
+          "filename": "cat01_tag_overflow/TC0051_studydescription_over_64KB.dcm",
+          "description": "StudyDescription value = 64KB",
+          "target_tag": "(0008,1030)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0054",
+          "filename": "cat01_tag_overflow/TC0053_studydescription_empty.dcm",
+          "description": "StudyDescription empty string",
+          "target_tag": "(0008,1030)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0056",
+          "filename": "cat01_tag_overflow/TC0055_studydescription_len1.dcm",
+          "description": "StudyDescription single char",
+          "target_tag": "(0008,1030)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0058",
+          "filename": "cat01_tag_overflow/TC0057_manufacturer_exact_max.dcm",
+          "description": "Manufacturer at max length (64 chars)",
+          "target_tag": "(0008,0070)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0060",
+          "filename": "cat01_tag_overflow/TC0059_manufacturer_over_1.dcm",
+          "description": "Manufacturer maxlen+1",
+          "target_tag": "(0008,0070)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0062",
+          "filename": "cat01_tag_overflow/TC0061_manufacturer_over_2x.dcm",
+          "description": "Manufacturer 2\u00d7 maxlen",
+          "target_tag": "(0008,0070)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0064",
+          "filename": "cat01_tag_overflow/TC0063_manufacturer_over_10x.dcm",
+          "description": "Manufacturer 10\u00d7 maxlen",
+          "target_tag": "(0008,0070)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0066",
+          "filename": "cat01_tag_overflow/TC0065_manufacturer_over_64KB.dcm",
+          "description": "Manufacturer value = 64KB",
+          "target_tag": "(0008,0070)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0068",
+          "filename": "cat01_tag_overflow/TC0067_manufacturer_empty.dcm",
+          "description": "Manufacturer empty string",
+          "target_tag": "(0008,0070)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0070",
+          "filename": "cat01_tag_overflow/TC0069_manufacturer_len1.dcm",
+          "description": "Manufacturer single char",
+          "target_tag": "(0008,0070)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0072",
+          "filename": "cat01_tag_overflow/TC0071_manufacturermodelname_exact_max.dcm",
+          "description": "ManufacturerModelName at max length (64 chars)",
+          "target_tag": "(0008,1090)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0074",
+          "filename": "cat01_tag_overflow/TC0073_manufacturermodelname_over_1.dcm",
+          "description": "ManufacturerModelName maxlen+1",
+          "target_tag": "(0008,1090)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0076",
+          "filename": "cat01_tag_overflow/TC0075_manufacturermodelname_over_2x.dcm",
+          "description": "ManufacturerModelName 2\u00d7 maxlen",
+          "target_tag": "(0008,1090)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0078",
+          "filename": "cat01_tag_overflow/TC0077_manufacturermodelname_over_10x.dcm",
+          "description": "ManufacturerModelName 10\u00d7 maxlen",
+          "target_tag": "(0008,1090)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0080",
+          "filename": "cat01_tag_overflow/TC0079_manufacturermodelname_over_64KB.dcm",
+          "description": "ManufacturerModelName value = 64KB",
+          "target_tag": "(0008,1090)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0082",
+          "filename": "cat01_tag_overflow/TC0081_manufacturermodelname_empty.dcm",
+          "description": "ManufacturerModelName empty string",
+          "target_tag": "(0008,1090)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0084",
+          "filename": "cat01_tag_overflow/TC0083_manufacturermodelname_len1.dcm",
+          "description": "ManufacturerModelName single char",
+          "target_tag": "(0008,1090)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0086",
+          "filename": "cat01_tag_overflow/TC0085_institutionname_exact_max.dcm",
+          "description": "InstitutionName at max length (64 chars)",
+          "target_tag": "(0008,0080)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0088",
+          "filename": "cat01_tag_overflow/TC0087_institutionname_over_1.dcm",
+          "description": "InstitutionName maxlen+1",
+          "target_tag": "(0008,0080)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0090",
+          "filename": "cat01_tag_overflow/TC0089_institutionname_over_2x.dcm",
+          "description": "InstitutionName 2\u00d7 maxlen",
+          "target_tag": "(0008,0080)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0092",
+          "filename": "cat01_tag_overflow/TC0091_institutionname_over_10x.dcm",
+          "description": "InstitutionName 10\u00d7 maxlen",
+          "target_tag": "(0008,0080)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0094",
+          "filename": "cat01_tag_overflow/TC0093_institutionname_over_64KB.dcm",
+          "description": "InstitutionName value = 64KB",
+          "target_tag": "(0008,0080)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0096",
+          "filename": "cat01_tag_overflow/TC0095_institutionname_empty.dcm",
+          "description": "InstitutionName empty string",
+          "target_tag": "(0008,0080)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0098",
+          "filename": "cat01_tag_overflow/TC0097_institutionname_len1.dcm",
+          "description": "InstitutionName single char",
+          "target_tag": "(0008,0080)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0100",
+          "filename": "cat01_tag_overflow/TC0099_patientsex_exact_max.dcm",
+          "description": "PatientSex at max length (16 chars)",
+          "target_tag": "(0010,0040)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0102",
+          "filename": "cat01_tag_overflow/TC0101_patientsex_over_1.dcm",
+          "description": "PatientSex maxlen+1",
+          "target_tag": "(0010,0040)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0104",
+          "filename": "cat01_tag_overflow/TC0103_patientsex_over_2x.dcm",
+          "description": "PatientSex 2\u00d7 maxlen",
+          "target_tag": "(0010,0040)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0106",
+          "filename": "cat01_tag_overflow/TC0105_patientsex_over_10x.dcm",
+          "description": "PatientSex 10\u00d7 maxlen",
+          "target_tag": "(0010,0040)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0108",
+          "filename": "cat01_tag_overflow/TC0107_patientsex_over_64KB.dcm",
+          "description": "PatientSex value = 64KB",
+          "target_tag": "(0010,0040)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0110",
+          "filename": "cat01_tag_overflow/TC0109_patientsex_empty.dcm",
+          "description": "PatientSex empty string",
+          "target_tag": "(0010,0040)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0112",
+          "filename": "cat01_tag_overflow/TC0111_patientsex_len1.dcm",
+          "description": "PatientSex single char",
+          "target_tag": "(0010,0040)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0114",
+          "filename": "cat01_tag_overflow/TC0113_seriesdescription_exact_max.dcm",
+          "description": "SeriesDescription at max length (64 chars)",
+          "target_tag": "(0008,103E)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0116",
+          "filename": "cat01_tag_overflow/TC0115_seriesdescription_over_1.dcm",
+          "description": "SeriesDescription maxlen+1",
+          "target_tag": "(0008,103E)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0118",
+          "filename": "cat01_tag_overflow/TC0117_seriesdescription_over_2x.dcm",
+          "description": "SeriesDescription 2\u00d7 maxlen",
+          "target_tag": "(0008,103E)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0120",
+          "filename": "cat01_tag_overflow/TC0119_seriesdescription_over_10x.dcm",
+          "description": "SeriesDescription 10\u00d7 maxlen",
+          "target_tag": "(0008,103E)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0122",
+          "filename": "cat01_tag_overflow/TC0121_seriesdescription_over_64KB.dcm",
+          "description": "SeriesDescription value = 64KB",
+          "target_tag": "(0008,103E)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0124",
+          "filename": "cat01_tag_overflow/TC0123_seriesdescription_empty.dcm",
+          "description": "SeriesDescription empty string",
+          "target_tag": "(0008,103E)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0126",
+          "filename": "cat01_tag_overflow/TC0125_seriesdescription_len1.dcm",
+          "description": "SeriesDescription single char",
+          "target_tag": "(0008,103E)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0128",
+          "filename": "cat01_tag_overflow/TC0127_sopinstanceuid_exact_max.dcm",
+          "description": "SOPInstanceUID at max length (64 chars)",
+          "target_tag": "(0008,0018)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0130",
+          "filename": "cat01_tag_overflow/TC0129_sopinstanceuid_over_1.dcm",
+          "description": "SOPInstanceUID maxlen+1",
+          "target_tag": "(0008,0018)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0132",
+          "filename": "cat01_tag_overflow/TC0131_sopinstanceuid_over_2x.dcm",
+          "description": "SOPInstanceUID 2\u00d7 maxlen",
+          "target_tag": "(0008,0018)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0134",
+          "filename": "cat01_tag_overflow/TC0133_sopinstanceuid_over_10x.dcm",
+          "description": "SOPInstanceUID 10\u00d7 maxlen",
+          "target_tag": "(0008,0018)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0136",
+          "filename": "cat01_tag_overflow/TC0135_sopinstanceuid_over_64KB.dcm",
+          "description": "SOPInstanceUID value = 64KB",
+          "target_tag": "(0008,0018)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0138",
+          "filename": "cat01_tag_overflow/TC0137_sopinstanceuid_empty.dcm",
+          "description": "SOPInstanceUID empty string",
+          "target_tag": "(0008,0018)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0140",
+          "filename": "cat01_tag_overflow/TC0139_sopinstanceuid_len1.dcm",
+          "description": "SOPInstanceUID single char",
+          "target_tag": "(0008,0018)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0142",
+          "filename": "cat01_tag_overflow/TC0141_studyinstanceuid_exact_max.dcm",
+          "description": "StudyInstanceUID at max length (64 chars)",
+          "target_tag": "(0020,000D)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0144",
+          "filename": "cat01_tag_overflow/TC0143_studyinstanceuid_over_1.dcm",
+          "description": "StudyInstanceUID maxlen+1",
+          "target_tag": "(0020,000D)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0146",
+          "filename": "cat01_tag_overflow/TC0145_studyinstanceuid_over_2x.dcm",
+          "description": "StudyInstanceUID 2\u00d7 maxlen",
+          "target_tag": "(0020,000D)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0148",
+          "filename": "cat01_tag_overflow/TC0147_studyinstanceuid_over_10x.dcm",
+          "description": "StudyInstanceUID 10\u00d7 maxlen",
+          "target_tag": "(0020,000D)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0150",
+          "filename": "cat01_tag_overflow/TC0149_studyinstanceuid_over_64KB.dcm",
+          "description": "StudyInstanceUID value = 64KB",
+          "target_tag": "(0020,000D)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0152",
+          "filename": "cat01_tag_overflow/TC0151_studyinstanceuid_empty.dcm",
+          "description": "StudyInstanceUID empty string",
+          "target_tag": "(0020,000D)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0154",
+          "filename": "cat01_tag_overflow/TC0153_studyinstanceuid_len1.dcm",
+          "description": "StudyInstanceUID single char",
+          "target_tag": "(0020,000D)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0156",
+          "filename": "cat01_tag_overflow/TC0155_seriesinstanceuid_exact_max.dcm",
+          "description": "SeriesInstanceUID at max length (64 chars)",
+          "target_tag": "(0020,000E)",
+          "mutation": "exact_max",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        },
+        {
+          "id": "TC0158",
+          "filename": "cat01_tag_overflow/TC0157_seriesinstanceuid_over_1.dcm",
+          "description": "SeriesInstanceUID maxlen+1",
+          "target_tag": "(0020,000E)",
+          "mutation": "over_1",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0160",
+          "filename": "cat01_tag_overflow/TC0159_seriesinstanceuid_over_2x.dcm",
+          "description": "SeriesInstanceUID 2\u00d7 maxlen",
+          "target_tag": "(0020,000E)",
+          "mutation": "over_2x",
+          "severity": "medium",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0162",
+          "filename": "cat01_tag_overflow/TC0161_seriesinstanceuid_over_10x.dcm",
+          "description": "SeriesInstanceUID 10\u00d7 maxlen",
+          "target_tag": "(0020,000E)",
+          "mutation": "over_10x",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully"
+        },
+        {
+          "id": "TC0164",
+          "filename": "cat01_tag_overflow/TC0163_seriesinstanceuid_over_64KB.dcm",
+          "description": "SeriesInstanceUID value = 64KB",
+          "target_tag": "(0020,000E)",
+          "mutation": "over_64KB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0166",
+          "filename": "cat01_tag_overflow/TC0165_seriesinstanceuid_empty.dcm",
+          "description": "SeriesInstanceUID empty string",
+          "target_tag": "(0020,000E)",
+          "mutation": "empty",
+          "severity": "low",
+          "expected_behavior": "Accept empty or reject"
+        },
+        {
+          "id": "TC0168",
+          "filename": "cat01_tag_overflow/TC0167_seriesinstanceuid_len1.dcm",
+          "description": "SeriesInstanceUID single char",
+          "target_tag": "(0020,000E)",
+          "mutation": "len1",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0170",
+          "filename": "cat01_tag_overflow/TC0169_patientname_over_1MB.dcm",
+          "description": "PatientName value = 1MB",
+          "target_tag": "(0010,0010)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0172",
+          "filename": "cat01_tag_overflow/TC0171_patientid_over_1MB.dcm",
+          "description": "PatientID value = 1MB",
+          "target_tag": "(0010,0020)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0174",
+          "filename": "cat01_tag_overflow/TC0173_accessionnumber_over_1MB.dcm",
+          "description": "AccessionNumber value = 1MB",
+          "target_tag": "(0008,0050)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0176",
+          "filename": "cat01_tag_overflow/TC0175_studydescription_over_1MB.dcm",
+          "description": "StudyDescription value = 1MB",
+          "target_tag": "(0008,1030)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0178",
+          "filename": "cat01_tag_overflow/TC0177_manufacturer_over_1MB.dcm",
+          "description": "Manufacturer value = 1MB",
+          "target_tag": "(0008,0070)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0180",
+          "filename": "cat01_tag_overflow/TC0179_manufacturermodelname_over_1MB.dcm",
+          "description": "ManufacturerModelName value = 1MB",
+          "target_tag": "(0008,1090)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0182",
+          "filename": "cat01_tag_overflow/TC0181_institutionname_over_1MB.dcm",
+          "description": "InstitutionName value = 1MB",
+          "target_tag": "(0008,0080)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0184",
+          "filename": "cat01_tag_overflow/TC0183_patientsex_over_1MB.dcm",
+          "description": "PatientSex value = 1MB",
+          "target_tag": "(0010,0040)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0186",
+          "filename": "cat01_tag_overflow/TC0185_seriesdescription_over_1MB.dcm",
+          "description": "SeriesDescription value = 1MB",
+          "target_tag": "(0008,103E)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0188",
+          "filename": "cat01_tag_overflow/TC0187_sopinstanceuid_over_1MB.dcm",
+          "description": "SOPInstanceUID value = 1MB",
+          "target_tag": "(0008,0018)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0190",
+          "filename": "cat01_tag_overflow/TC0189_studyinstanceuid_over_1MB.dcm",
+          "description": "StudyInstanceUID value = 1MB",
+          "target_tag": "(0020,000D)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0192",
+          "filename": "cat01_tag_overflow/TC0191_seriesinstanceuid_over_1MB.dcm",
+          "description": "SeriesInstanceUID value = 1MB",
+          "target_tag": "(0020,000E)",
+          "mutation": "over_1MB",
+          "severity": "high",
+          "expected_behavior": "Reject gracefully or OOM crash"
+        },
+        {
+          "id": "TC0194",
+          "filename": "cat01_tag_overflow/TC0193_pn_256separators.dcm",
+          "description": "PN: 256 ^ separators (only 4 legal)",
+          "target_tag": "(0010,0010)",
+          "mutation": "pn_separators",
+          "severity": "high",
+          "expected_behavior": "Reject or parse error"
+        },
+        {
+          "id": "TC0196",
+          "filename": "cat01_tag_overflow/TC0195_uid_200_components.dcm",
+          "description": "UI: 200 dot-separated components",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_components",
+          "severity": "high",
+          "expected_behavior": "Reject invalid UID"
+        },
+        {
+          "id": "TC0198",
+          "filename": "cat01_tag_overflow/TC0197_cs_lowercase.dcm",
+          "description": "CS: lowercase value (protocol requires uppercase)",
+          "target_tag": "(0010,0040)",
+          "mutation": "cs_lowercase",
+          "severity": "low",
+          "expected_behavior": "Accept or normalise"
+        },
+        {
+          "id": "TC0200",
+          "filename": "cat01_tag_overflow/TC0199_age_999Y.dcm",
+          "description": "AS (PatientAge): value='999Y'",
+          "target_tag": "(0010,1010)",
+          "mutation": "as_999Y",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid AS format"
+        },
+        {
+          "id": "TC0202",
+          "filename": "cat01_tag_overflow/TC0201_age_zero.dcm",
+          "description": "AS (PatientAge): value='00'",
+          "target_tag": "(0010,1010)",
+          "mutation": "as_zero",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid AS format"
+        },
+        {
+          "id": "TC0204",
+          "filename": "cat01_tag_overflow/TC0203_age_4digit.dcm",
+          "description": "AS (PatientAge): value='1234D'",
+          "target_tag": "(0010,1010)",
+          "mutation": "as_4digit",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid AS format"
+        },
+        {
+          "id": "TC0206",
+          "filename": "cat01_tag_overflow/TC0205_age_negative.dcm",
+          "description": "AS (PatientAge): value='-001Y'",
+          "target_tag": "(0010,1010)",
+          "mutation": "as_negative",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid AS format"
+        },
+        {
+          "id": "TC0208",
+          "filename": "cat01_tag_overflow/TC0207_age_non_numeric.dcm",
+          "description": "AS (PatientAge): value='ABCY'",
+          "target_tag": "(0010,1010)",
+          "mutation": "as_non_numeric",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid AS format"
+        },
+        {
+          "id": "TC0210",
+          "filename": "cat01_tag_overflow/TC0209_age_empty.dcm",
+          "description": "AS (PatientAge): value=''",
+          "target_tag": "(0010,1010)",
+          "mutation": "as_empty",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid AS format"
+        },
+        {
+          "id": "TC0212",
+          "filename": "cat01_tag_overflow/TC0211_age_spaces.dcm",
+          "description": "AS (PatientAge): value='   Y'",
+          "target_tag": "(0010,1010)",
+          "mutation": "as_spaces",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid AS format"
+        },
+        {
+          "id": "TC0214",
+          "filename": "cat01_tag_overflow/TC0213_date_zeros.dcm",
+          "description": "DA (StudyDate): value='00000000'",
+          "target_tag": "(0008,0020)",
+          "mutation": "da_zeros",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid date"
+        },
+        {
+          "id": "TC0216",
+          "filename": "cat01_tag_overflow/TC0215_date_nines.dcm",
+          "description": "DA (StudyDate): value='99999999'",
+          "target_tag": "(0008,0020)",
+          "mutation": "da_nines",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid date"
+        },
+        {
+          "id": "TC0218",
+          "filename": "cat01_tag_overflow/TC0217_date_hyphen.dcm",
+          "description": "DA (StudyDate): value='2025-13-45'",
+          "target_tag": "(0008,0020)",
+          "mutation": "da_hyphen",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid date"
+        },
+        {
+          "id": "TC0220",
+          "filename": "cat01_tag_overflow/TC0219_date_month13.dcm",
+          "description": "DA (StudyDate): value='20251301'",
+          "target_tag": "(0008,0020)",
+          "mutation": "da_month13",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid date"
+        },
+        {
+          "id": "TC0222",
+          "filename": "cat01_tag_overflow/TC0221_date_empty.dcm",
+          "description": "DA (StudyDate): value=''",
+          "target_tag": "(0008,0020)",
+          "mutation": "da_empty",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid date"
+        },
+        {
+          "id": "TC0224",
+          "filename": "cat01_tag_overflow/TC0223_time_overflow.dcm",
+          "description": "TM (StudyTime): value='999999.999999'",
+          "target_tag": "(0008,0030)",
+          "mutation": "tm_overflow",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid time"
+        },
+        {
+          "id": "TC0226",
+          "filename": "cat01_tag_overflow/TC0225_time_empty.dcm",
+          "description": "TM (StudyTime): value=''",
+          "target_tag": "(0008,0030)",
+          "mutation": "tm_empty",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid time"
+        },
+        {
+          "id": "TC0228",
+          "filename": "cat01_tag_overflow/TC0227_time_30hr.dcm",
+          "description": "TM (StudyTime): value='300000'",
+          "target_tag": "(0008,0030)",
+          "mutation": "tm_30hr",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid time"
+        },
+        {
+          "id": "TC0230",
+          "filename": "cat01_tag_overflow/TC0229_time_negative.dcm",
+          "description": "TM (StudyTime): value='-010000'",
+          "target_tag": "(0008,0030)",
+          "mutation": "tm_negative",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid time"
+        }
+      ]
+    },
+    {
+      "id": "cat02",
+      "name": "cat02_vr_mismatch",
+      "case_count": 15,
+      "cases": [
+        {
+          "id": "TC0232",
+          "filename": "cat02_vr_mismatch/TC0231_sopinstanceuid_UI_as_LO.dcm",
+          "description": "UI field encoded as LO",
+          "target_tag": "(SOPInstanceUID)",
+          "mutation": "vr_UI_as_LO",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0234",
+          "filename": "cat02_vr_mismatch/TC0233_rows_US_as_UL.dcm",
+          "description": "US field given 4-byte UL value",
+          "target_tag": "(Rows)",
+          "mutation": "vr_US_as_UL",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0236",
+          "filename": "cat02_vr_mismatch/TC0235_bitsallocated_US_as_SS.dcm",
+          "description": "US field given signed SS",
+          "target_tag": "(BitsAllocated)",
+          "mutation": "vr_US_as_SS",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0238",
+          "filename": "cat02_vr_mismatch/TC0237_studydate_DA_as_LO.dcm",
+          "description": "DA field encoded as LO",
+          "target_tag": "(StudyDate)",
+          "mutation": "vr_DA_as_LO",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0240",
+          "filename": "cat02_vr_mismatch/TC0239_studydate_DA_as_DS.dcm",
+          "description": "DA field encoded as DS",
+          "target_tag": "(StudyDate)",
+          "mutation": "vr_DA_as_DS",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0242",
+          "filename": "cat02_vr_mismatch/TC0241_patientname_PN_as_OB.dcm",
+          "description": "PN field given raw OB bytes",
+          "target_tag": "(PatientName)",
+          "mutation": "vr_PN_as_OB",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0244",
+          "filename": "cat02_vr_mismatch/TC0243_pixeldata_OB_as_OW.dcm",
+          "description": "OB Pixel Data given OW VR tag",
+          "target_tag": "(PixelData)",
+          "mutation": "vr_OB_as_OW",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0246",
+          "filename": "cat02_vr_mismatch/TC0245_patientage_AS_as_IS.dcm",
+          "description": "AS field given IS (integer string)",
+          "target_tag": "(PatientAge)",
+          "mutation": "vr_AS_as_IS",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0248",
+          "filename": "cat02_vr_mismatch/TC0247_bitsstored_US_as_UL.dcm",
+          "description": "US(BitsStored) given UL encoding",
+          "target_tag": "(BitsStored)",
+          "mutation": "vr_US_as_UL",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0250",
+          "filename": "cat02_vr_mismatch/TC0249_modality_CS_as_LO.dcm",
+          "description": "CS field encoded as LO",
+          "target_tag": "(Modality)",
+          "mutation": "vr_CS_as_LO",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0252",
+          "filename": "cat02_vr_mismatch/TC0251_manufacturer_LO_as_UN.dcm",
+          "description": "LO field given UN (unknown) VR",
+          "target_tag": "(Manufacturer)",
+          "mutation": "vr_LO_as_UN",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0254",
+          "filename": "cat02_vr_mismatch/TC0253_imagetype_CS_as_SH.dcm",
+          "description": "CS (ImageType) given SH VR",
+          "target_tag": "(ImageType)",
+          "mutation": "vr_CS_as_SH",
+          "severity": "high",
+          "expected_behavior": "Reject with VR mismatch error"
+        },
+        {
+          "id": "TC0256",
+          "filename": "cat02_vr_mismatch/TC0255_implicit_rows_4bytes.dcm",
+          "description": "Implicit: Rows given 4 bytes instead of 2",
+          "target_tag": "(Rows)",
+          "mutation": "implicit_mismatch",
+          "severity": "high",
+          "expected_behavior": "Reject or parse error"
+        },
+        {
+          "id": "TC0258",
+          "filename": "cat02_vr_mismatch/TC0257_implicit_patname_binary.dcm",
+          "description": "Implicit: PN field has binary garbage",
+          "target_tag": "(PatientName)",
+          "mutation": "implicit_mismatch",
+          "severity": "high",
+          "expected_behavior": "Reject or parse error"
+        },
+        {
+          "id": "TC0260",
+          "filename": "cat02_vr_mismatch/TC0259_implicit_date_allff.dcm",
+          "description": "Implicit: DA field all 0xFF bytes",
+          "target_tag": "(StudyDate)",
+          "mutation": "implicit_mismatch",
+          "severity": "high",
+          "expected_behavior": "Reject or parse error"
+        }
+      ]
+    },
+    {
+      "id": "cat03",
+      "name": "cat03_sequence_nesting",
+      "case_count": 12,
+      "cases": [
+        {
+          "id": "TC0262",
+          "filename": "cat03_sequence_nesting/TC0261_depth_10.dcm",
+          "description": "SQ depth=10 nested sequences",
+          "target_tag": "(0008,1110)",
+          "mutation": "depth_10",
+          "severity": "medium",
+          "expected_behavior": "Stack overflow or OOM"
+        },
+        {
+          "id": "TC0264",
+          "filename": "cat03_sequence_nesting/TC0263_depth_50.dcm",
+          "description": "SQ depth=50 nested sequences",
+          "target_tag": "(0008,1110)",
+          "mutation": "depth_50",
+          "severity": "medium",
+          "expected_behavior": "Stack overflow or OOM"
+        },
+        {
+          "id": "TC0266",
+          "filename": "cat03_sequence_nesting/TC0265_depth_100.dcm",
+          "description": "SQ depth=100 nested sequences",
+          "target_tag": "(0008,1110)",
+          "mutation": "depth_100",
+          "severity": "high",
+          "expected_behavior": "Stack overflow or OOM"
+        },
+        {
+          "id": "TC0268",
+          "filename": "cat03_sequence_nesting/TC0267_depth_500_raw.dcm",
+          "description": "SQ depth=500 nested sequences (raw bytes, no pydicom recursion)",
+          "target_tag": "(0008,1110)",
+          "mutation": "depth_500",
+          "severity": "high",
+          "expected_behavior": "Stack overflow or OOM on target"
+        },
+        {
+          "id": "TC0270",
+          "filename": "cat03_sequence_nesting/TC0269_wide_1_items.dcm",
+          "description": "SQ with 1 items (width stress)",
+          "target_tag": "(0008,114A)",
+          "mutation": "wide_1",
+          "severity": "medium",
+          "expected_behavior": "OOM or slowdown"
+        },
+        {
+          "id": "TC0272",
+          "filename": "cat03_sequence_nesting/TC0271_wide_100_items.dcm",
+          "description": "SQ with 100 items (width stress)",
+          "target_tag": "(0008,114A)",
+          "mutation": "wide_100",
+          "severity": "medium",
+          "expected_behavior": "OOM or slowdown"
+        },
+        {
+          "id": "TC0274",
+          "filename": "cat03_sequence_nesting/TC0273_wide_1000_items.dcm",
+          "description": "SQ with 1000 items (width stress)",
+          "target_tag": "(0008,114A)",
+          "mutation": "wide_1000",
+          "severity": "high",
+          "expected_behavior": "OOM or slowdown"
+        },
+        {
+          "id": "TC0276",
+          "filename": "cat03_sequence_nesting/TC0275_undef_length_seq.dcm",
+          "description": "Undefined-length SQ with proper delimiters (appended raw)",
+          "target_tag": "(0008,1110)",
+          "mutation": "undef_length",
+          "severity": "medium",
+          "expected_behavior": "Accept with correct parsing"
+        },
+        {
+          "id": "TC0278",
+          "filename": "cat03_sequence_nesting/TC0277_missing_delim.dcm",
+          "description": "Undefined-length SQ without any delimitation items",
+          "target_tag": "(0008,1110)",
+          "mutation": "missing_delim",
+          "severity": "high",
+          "expected_behavior": "Parser hang or crash"
+        },
+        {
+          "id": "TC0280",
+          "filename": "cat03_sequence_nesting/TC0279_stray_seq_delim.dcm",
+          "description": "Sequence Delimitation Item without preceding sequence",
+          "target_tag": "",
+          "mutation": "stray_delim",
+          "severity": "high",
+          "expected_behavior": "Parser error or crash"
+        },
+        {
+          "id": "TC0282",
+          "filename": "cat03_sequence_nesting/TC0281_seq_with_pixeldata.dcm",
+          "description": "SQ item containing Pixel Data tag (7FE0,0010)",
+          "target_tag": "(0008,1110)",
+          "mutation": "seq_pixeldata",
+          "severity": "high",
+          "expected_behavior": "Parser confusion or crash"
+        },
+        {
+          "id": "TC0284",
+          "filename": "cat03_sequence_nesting/TC0283_zero_length_items.dcm",
+          "description": "SQ with 3 empty (zero-length) items",
+          "target_tag": "(0008,1110)",
+          "mutation": "zero_items",
+          "severity": "low",
+          "expected_behavior": "Accept or reject gracefully"
+        }
+      ]
+    },
+    {
+      "id": "cat04",
+      "name": "cat04_pixel_data",
+      "case_count": 29,
+      "cases": [
+        {
+          "id": "TC0286",
+          "filename": "cat04_pixel_data/TC0285_buf_half.dcm",
+          "description": "Pixel buffer half expected size",
+          "target_tag": "(7FE0,0010)",
+          "mutation": "buf_half",
+          "severity": "high",
+          "expected_behavior": "Buffer over/underrun in pixel renderer"
+        },
+        {
+          "id": "TC0288",
+          "filename": "cat04_pixel_data/TC0287_buf_2x.dcm",
+          "description": "Pixel buffer 2\u00d7 expected size",
+          "target_tag": "(7FE0,0010)",
+          "mutation": "buf_2x",
+          "severity": "high",
+          "expected_behavior": "Buffer over/underrun in pixel renderer"
+        },
+        {
+          "id": "TC0290",
+          "filename": "cat04_pixel_data/TC0289_buf_10x.dcm",
+          "description": "Pixel buffer 10\u00d7 expected size",
+          "target_tag": "(7FE0,0010)",
+          "mutation": "buf_10x",
+          "severity": "high",
+          "expected_behavior": "Buffer over/underrun in pixel renderer"
+        },
+        {
+          "id": "TC0292",
+          "filename": "cat04_pixel_data/TC0291_buf_zero.dcm",
+          "description": "Pixel buffer empty but Rows/Cols > 0",
+          "target_tag": "(7FE0,0010)",
+          "mutation": "buf_zero",
+          "severity": "high",
+          "expected_behavior": "Buffer over/underrun in pixel renderer"
+        },
+        {
+          "id": "TC0294",
+          "filename": "cat04_pixel_data/TC0293_buf_one_byte.dcm",
+          "description": "Pixel buffer 1 byte",
+          "target_tag": "(7FE0,0010)",
+          "mutation": "buf_one_byte",
+          "severity": "high",
+          "expected_behavior": "Buffer over/underrun in pixel renderer"
+        },
+        {
+          "id": "TC0296",
+          "filename": "cat04_pixel_data/TC0295_rows_zero.dcm",
+          "description": "Rows=0 but non-empty pixel buffer",
+          "target_tag": "(0028,0010)",
+          "mutation": "rows_zero",
+          "severity": "medium",
+          "expected_behavior": "Division-by-zero or crash"
+        },
+        {
+          "id": "TC0298",
+          "filename": "cat04_pixel_data/TC0297_cols_zero.dcm",
+          "description": "Columns=0 but non-empty pixel buffer",
+          "target_tag": "(0028,0011)",
+          "mutation": "cols_zero",
+          "severity": "medium",
+          "expected_behavior": "Division-by-zero or crash"
+        },
+        {
+          "id": "TC0300",
+          "filename": "cat04_pixel_data/TC0299_bits_bsstored_gt_ba.dcm",
+          "description": "BitsAllocated=16 BitsStored=17 HighBit=11",
+          "target_tag": "(0028,0100)",
+          "mutation": "bsstored_gt_ba",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0302",
+          "filename": "cat04_pixel_data/TC0301_bits_highbit_eq_ba.dcm",
+          "description": "BitsAllocated=16 BitsStored=12 HighBit=16",
+          "target_tag": "(0028,0100)",
+          "mutation": "highbit_eq_ba",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0304",
+          "filename": "cat04_pixel_data/TC0303_bits_highbit_gt_ba.dcm",
+          "description": "BitsAllocated=16 BitsStored=12 HighBit=20",
+          "target_tag": "(0028,0100)",
+          "mutation": "highbit_gt_ba",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0306",
+          "filename": "cat04_pixel_data/TC0305_bits_ba_zero.dcm",
+          "description": "BitsAllocated=0 BitsStored=0 HighBit=0",
+          "target_tag": "(0028,0100)",
+          "mutation": "ba_zero",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0308",
+          "filename": "cat04_pixel_data/TC0307_bits_ba_one.dcm",
+          "description": "BitsAllocated=1 BitsStored=1 HighBit=0",
+          "target_tag": "(0028,0100)",
+          "mutation": "ba_one",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0310",
+          "filename": "cat04_pixel_data/TC0309_bits_ba_three.dcm",
+          "description": "BitsAllocated=3 BitsStored=3 HighBit=2",
+          "target_tag": "(0028,0100)",
+          "mutation": "ba_three",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0312",
+          "filename": "cat04_pixel_data/TC0311_bits_ba_nine.dcm",
+          "description": "BitsAllocated=9 BitsStored=9 HighBit=8",
+          "target_tag": "(0028,0100)",
+          "mutation": "ba_nine",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0314",
+          "filename": "cat04_pixel_data/TC0313_bits_ba_24.dcm",
+          "description": "BitsAllocated=24 BitsStored=24 HighBit=23",
+          "target_tag": "(0028,0100)",
+          "mutation": "ba_24",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0316",
+          "filename": "cat04_pixel_data/TC0315_bits_ba_48.dcm",
+          "description": "BitsAllocated=48 BitsStored=48 HighBit=47",
+          "target_tag": "(0028,0100)",
+          "mutation": "ba_48",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0318",
+          "filename": "cat04_pixel_data/TC0317_bits_ba_128.dcm",
+          "description": "BitsAllocated=128 BitsStored=128 HighBit=127",
+          "target_tag": "(0028,0100)",
+          "mutation": "ba_128",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0320",
+          "filename": "cat04_pixel_data/TC0319_bits_bs_zero.dcm",
+          "description": "BitsAllocated=16 BitsStored=0 HighBit=0",
+          "target_tag": "(0028,0100)",
+          "mutation": "bs_zero",
+          "severity": "high",
+          "expected_behavior": "Integer overflow or crash in pixel renderer"
+        },
+        {
+          "id": "TC0322",
+          "filename": "cat04_pixel_data/TC0321_encap_empty_bot.dcm",
+          "description": "Encapsulated: empty BOT with fragment present",
+          "target_tag": "(7FE0,0010)",
+          "mutation": "encap_empty_bot",
+          "severity": "medium",
+          "expected_behavior": "Parse error in offset table"
+        },
+        {
+          "id": "TC0324",
+          "filename": "cat04_pixel_data/TC0323_encap_zero_frag.dcm",
+          "description": "Encapsulated: fragment with declared length=0",
+          "target_tag": "(7FE0,0010)",
+          "mutation": "encap_zero_frag",
+          "severity": "high",
+          "expected_behavior": "Divide-by-zero or read overrun"
+        },
+        {
+          "id": "TC0326",
+          "filename": "cat04_pixel_data/TC0325_encap_10k_frags.dcm",
+          "description": "Encapsulated: 10000 one-byte fragments",
+          "target_tag": "(7FE0,0010)",
+          "mutation": "encap_10k_frags",
+          "severity": "high",
+          "expected_behavior": "Fragment iteration OOM or slowdown"
+        },
+        {
+          "id": "TC0328",
+          "filename": "cat04_pixel_data/TC0327_mono2_spp3.dcm",
+          "description": "MONOCHROME2 with SamplesPerPixel=3",
+          "target_tag": "(0028,0004)",
+          "mutation": "mono2_spp3",
+          "severity": "high",
+          "expected_behavior": "Crash in pixel decoder"
+        },
+        {
+          "id": "TC0330",
+          "filename": "cat04_pixel_data/TC0329_rgb_spp1.dcm",
+          "description": "RGB with SamplesPerPixel=1",
+          "target_tag": "(0028,0004)",
+          "mutation": "rgb_spp1",
+          "severity": "high",
+          "expected_behavior": "Crash in pixel decoder"
+        },
+        {
+          "id": "TC0332",
+          "filename": "cat04_pixel_data/TC0331_pi_invalid.dcm",
+          "description": "PhotometricInterpretation='FUZZ'",
+          "target_tag": "(0028,0004)",
+          "mutation": "pi_invalid",
+          "severity": "medium",
+          "expected_behavior": "Reject unknown PI"
+        },
+        {
+          "id": "TC0334",
+          "filename": "cat04_pixel_data/TC0333_pi_empty.dcm",
+          "description": "PhotometricInterpretation=''",
+          "target_tag": "(0028,0004)",
+          "mutation": "pi_empty",
+          "severity": "medium",
+          "expected_behavior": "Reject unknown PI"
+        },
+        {
+          "id": "TC0336",
+          "filename": "cat04_pixel_data/TC0335_pi_256chars.dcm",
+          "description": "PhotometricInterpretation='XXXXXXXXXXXXXXXXXXXX'",
+          "target_tag": "(0028,0004)",
+          "mutation": "pi_256chars",
+          "severity": "medium",
+          "expected_behavior": "Reject unknown PI"
+        },
+        {
+          "id": "TC0338",
+          "filename": "cat04_pixel_data/TC0337_mf_nf_zero.dcm",
+          "description": "NumberOfFrames=0, buffer sized for 1 frames",
+          "target_tag": "(0028,0008)",
+          "mutation": "nf_zero",
+          "severity": "high",
+          "expected_behavior": "Integer overflow, OOM, or crash"
+        },
+        {
+          "id": "TC0340",
+          "filename": "cat04_pixel_data/TC0339_mf_nf_million.dcm",
+          "description": "NumberOfFrames=999999, buffer sized for 1 frames",
+          "target_tag": "(0028,0008)",
+          "mutation": "nf_million",
+          "severity": "high",
+          "expected_behavior": "Integer overflow, OOM, or crash"
+        },
+        {
+          "id": "TC0342",
+          "filename": "cat04_pixel_data/TC0341_mf_nf1_buf100.dcm",
+          "description": "NumberOfFrames=1, buffer sized for 100 frames",
+          "target_tag": "(0028,0008)",
+          "mutation": "nf1_buf100",
+          "severity": "high",
+          "expected_behavior": "Integer overflow, OOM, or crash"
+        }
+      ]
+    },
+    {
+      "id": "cat05",
+      "name": "cat05_transfer_syntax",
+      "case_count": 3,
+      "cases": [
+        {
+          "id": "TC0344",
+          "filename": "cat05_transfer_syntax/TC0343_declares_explicit_data_implicit.dcm",
+          "description": "File Meta declares ExplicitVRLE but dataset is ImplicitVR",
+          "target_tag": "(0002,0010)",
+          "mutation": "ts_explicit_meta_implicit_data",
+          "severity": "high",
+          "expected_behavior": "Parse error or garbled data"
+        },
+        {
+          "id": "TC0346",
+          "filename": "cat05_transfer_syntax/TC0345_deflate_corrupt.dcm",
+          "description": "Deflated TS declared, corrupt zlib stream",
+          "target_tag": "(0002,0010)",
+          "mutation": "deflate_corrupt",
+          "severity": "high",
+          "expected_behavior": "zlib decompression error or crash"
+        },
+        {
+          "id": "TC0348",
+          "filename": "cat05_transfer_syntax/TC0347_deflate_truncated.dcm",
+          "description": "Deflated TS with truncated zlib stream",
+          "target_tag": "(0002,0010)",
+          "mutation": "deflate_truncated",
+          "severity": "high",
+          "expected_behavior": "Truncated stream error or crash"
+        }
+      ]
+    },
+    {
+      "id": "cat06",
+      "name": "cat06_private_tags",
+      "case_count": 14,
+      "cases": [
+        {
+          "id": "TC0350",
+          "filename": "cat06_private_tags/TC0349_private_valid.dcm",
+          "description": "Valid private creator + data block",
+          "target_tag": "(0009,xx01)",
+          "mutation": "private_valid",
+          "severity": "low",
+          "expected_behavior": "Accept"
+        },
+        {
+          "id": "TC0352",
+          "filename": "cat06_private_tags/TC0351_private_no_creator.dcm",
+          "description": "Private data tag without private creator",
+          "target_tag": "(0009,1001)",
+          "mutation": "private_no_creator",
+          "severity": "medium",
+          "expected_behavior": "Accept or warn"
+        },
+        {
+          "id": "TC0354",
+          "filename": "cat06_private_tags/TC0353_cmd_group_in_dataset.dcm",
+          "description": "Command group tags (0x0001,xxxx) injected into dataset",
+          "target_tag": "(0001,0000)",
+          "mutation": "cmd_group_inject",
+          "severity": "high",
+          "expected_behavior": "Logic confusion between command/dataset parsing"
+        },
+        {
+          "id": "TC0356",
+          "filename": "cat06_private_tags/TC0355_group_ffff.dcm",
+          "description": "Tags in group 0xFFFF (illegal group)",
+          "target_tag": "(FFFF,0001)",
+          "mutation": "group_ffff",
+          "severity": "high",
+          "expected_behavior": "Parse error or crash"
+        },
+        {
+          "id": "TC0358",
+          "filename": "cat06_private_tags/TC0357_stray_item_tag.dcm",
+          "description": "Item tag (FFFE,E000) outside any sequence",
+          "target_tag": "",
+          "mutation": "stray_item_tag",
+          "severity": "high",
+          "expected_behavior": "Parser error or crash"
+        },
+        {
+          "id": "TC0360",
+          "filename": "cat06_private_tags/TC0359_stray_item_delim.dcm",
+          "description": "Item Delimitation (FFFE,E00D) without Item",
+          "target_tag": "",
+          "mutation": "stray_item_delim",
+          "severity": "high",
+          "expected_behavior": "Parser error or crash"
+        },
+        {
+          "id": "TC0362",
+          "filename": "cat06_private_tags/TC0361_stray_seq_delim.dcm",
+          "description": "Sequence Delimitation (FFFE,E0DD) without Sequence",
+          "target_tag": "",
+          "mutation": "stray_seq_delim",
+          "severity": "high",
+          "expected_behavior": "Parser error or crash"
+        },
+        {
+          "id": "TC0364",
+          "filename": "cat06_private_tags/TC0363_tag_order_violation.dcm",
+          "description": "Tag (0008,0001) appended after (0010,0010) \u2014 out of ascending order",
+          "target_tag": "",
+          "mutation": "tag_order",
+          "severity": "medium",
+          "expected_behavior": "Parse error or truncated dataset"
+        },
+        {
+          "id": "TC0366",
+          "filename": "cat06_private_tags/TC0365_private_bulk.dcm",
+          "description": "16 private data elements in group 0x0009",
+          "target_tag": "(0009,xxxx)",
+          "mutation": "private_bulk",
+          "severity": "medium",
+          "expected_behavior": "Accept or reject based on policy"
+        },
+        {
+          "id": "TC0368",
+          "filename": "cat06_private_tags/TC0367_inject_shell_dollar.dcm",
+          "description": "Injection payload in PatientName/ID: $(id)",
+          "target_tag": "(0010,0010)",
+          "mutation": "inject_shell_dollar",
+          "severity": "high",
+          "expected_behavior": "CHECK for command execution on PACS filesystem"
+        },
+        {
+          "id": "TC0370",
+          "filename": "cat06_private_tags/TC0369_inject_backtick.dcm",
+          "description": "Injection payload in PatientName/ID: `whoami`",
+          "target_tag": "(0010,0010)",
+          "mutation": "inject_backtick",
+          "severity": "high",
+          "expected_behavior": "CHECK for command execution on PACS filesystem"
+        },
+        {
+          "id": "TC0372",
+          "filename": "cat06_private_tags/TC0371_inject_semicolon_ls.dcm",
+          "description": "Injection payload in PatientName/ID: ; ls /tmp ;",
+          "target_tag": "(0010,0010)",
+          "mutation": "inject_semicolon_ls",
+          "severity": "high",
+          "expected_behavior": "CHECK for command execution on PACS filesystem"
+        },
+        {
+          "id": "TC0374",
+          "filename": "cat06_private_tags/TC0373_inject_sql_injection.dcm",
+          "description": "Injection payload in PatientName/ID: ' OR '1'='1",
+          "target_tag": "(0010,0010)",
+          "mutation": "inject_sql_injection",
+          "severity": "high",
+          "expected_behavior": "CHECK for command execution on PACS filesystem"
+        },
+        {
+          "id": "TC0376",
+          "filename": "cat06_private_tags/TC0375_inject_format_string.dcm",
+          "description": "Injection payload in PatientName/ID: %s%s%s%n",
+          "target_tag": "(0010,0010)",
+          "mutation": "inject_format_string",
+          "severity": "high",
+          "expected_behavior": "CHECK for command execution on PACS filesystem"
+        }
+      ]
+    },
+    {
+      "id": "cat07",
+      "name": "cat07_file_meta",
+      "case_count": 14,
+      "cases": [
+        {
+          "id": "TC0378",
+          "filename": "cat07_file_meta/TC0377_no_preamble.dcm",
+          "description": "Dataset with no 128-byte preamble and no DICM magic",
+          "target_tag": "(0002,0000)",
+          "mutation": "no_preamble",
+          "severity": "medium",
+          "expected_behavior": "Accept (valid encoding) or reject"
+        },
+        {
+          "id": "TC0380",
+          "filename": "cat07_file_meta/TC0379_preamble_ff.dcm",
+          "description": "Preamble = 128 bytes of 0xFF instead of 0x00",
+          "target_tag": "(0002,0000)",
+          "mutation": "preamble_ff",
+          "severity": "low",
+          "expected_behavior": "Accept (preamble is unused by standard)"
+        },
+        {
+          "id": "TC0382",
+          "filename": "cat07_file_meta/TC0381_preamble_127.dcm",
+          "description": "Preamble 127 bytes (off-by-one) before DICM magic",
+          "target_tag": "(0002,0000)",
+          "mutation": "preamble_127",
+          "severity": "high",
+          "expected_behavior": "Parse error or wrong DICM offset"
+        },
+        {
+          "id": "TC0384",
+          "filename": "cat07_file_meta/TC0383_no_dicm.dcm",
+          "description": "128-byte preamble present but DICM magic absent (replaced with 0x00)",
+          "target_tag": "",
+          "mutation": "no_dicm",
+          "severity": "medium",
+          "expected_behavior": "Reject or accept as implicit dataset"
+        },
+        {
+          "id": "TC0386",
+          "filename": "cat07_file_meta/TC0385_dicm_offset0.dcm",
+          "description": "DICM magic at byte offset 0 instead of 128",
+          "target_tag": "",
+          "mutation": "dicm_offset0",
+          "severity": "medium",
+          "expected_behavior": "Reject or wrong parse start"
+        },
+        {
+          "id": "TC0388",
+          "filename": "cat07_file_meta/TC0387_dicm_offset64.dcm",
+          "description": "DICM magic at byte offset 64 instead of 128",
+          "target_tag": "",
+          "mutation": "dicm_offset64",
+          "severity": "medium",
+          "expected_behavior": "Reject or wrong parse start"
+        },
+        {
+          "id": "TC0390",
+          "filename": "cat07_file_meta/TC0389_dicm_offset256.dcm",
+          "description": "DICM magic at byte offset 256 instead of 128",
+          "target_tag": "",
+          "mutation": "dicm_offset256",
+          "severity": "medium",
+          "expected_behavior": "Reject or wrong parse start"
+        },
+        {
+          "id": "TC0392",
+          "filename": "cat07_file_meta/TC0391_meta_glen_zero.dcm",
+          "description": "File Meta Group Length (0002,0000) = 0",
+          "target_tag": "(0002,0000)",
+          "mutation": "meta_glen_zero",
+          "severity": "high",
+          "expected_behavior": "Truncated or over-read meta section"
+        },
+        {
+          "id": "TC0394",
+          "filename": "cat07_file_meta/TC0393_meta_glen_one.dcm",
+          "description": "File Meta Group Length (0002,0000) = 1",
+          "target_tag": "(0002,0000)",
+          "mutation": "meta_glen_one",
+          "severity": "high",
+          "expected_behavior": "Truncated or over-read meta section"
+        },
+        {
+          "id": "TC0396",
+          "filename": "cat07_file_meta/TC0395_meta_glen_max.dcm",
+          "description": "File Meta Group Length (0002,0000) = 4294967295",
+          "target_tag": "(0002,0000)",
+          "mutation": "meta_glen_max",
+          "severity": "high",
+          "expected_behavior": "Truncated or over-read meta section"
+        },
+        {
+          "id": "TC0398",
+          "filename": "cat07_file_meta/TC0397_meta_glen_huge.dcm",
+          "description": "File Meta Group Length (0002,0000) = 9999999",
+          "target_tag": "(0002,0000)",
+          "mutation": "meta_glen_huge",
+          "severity": "high",
+          "expected_behavior": "Truncated or over-read meta section"
+        },
+        {
+          "id": "TC0400",
+          "filename": "cat07_file_meta/TC0399_sop_class_mismatch.dcm",
+          "description": "Meta SOP Class (Secondary Capture) \u2260 Dataset SOP Class (CT)",
+          "target_tag": "(0002,0002)",
+          "mutation": "sop_class_mismatch",
+          "severity": "medium",
+          "expected_behavior": "Accept or reject with warning"
+        },
+        {
+          "id": "TC0402",
+          "filename": "cat07_file_meta/TC0401_invalid_ts.dcm",
+          "description": "Transfer Syntax UID in meta = non-existent/invalid UID",
+          "target_tag": "(0002,0010)",
+          "mutation": "invalid_ts",
+          "severity": "high",
+          "expected_behavior": "Reject or crash on TS lookup"
+        },
+        {
+          "id": "TC0404",
+          "filename": "cat07_file_meta/TC0403_meta_tag_in_dataset.dcm",
+          "description": "Group 0002 tag (0002,0013) appearing after dataset tags",
+          "target_tag": "(0002,0013)",
+          "mutation": "meta_in_dataset",
+          "severity": "medium",
+          "expected_behavior": "Reject or accept with warning"
+        }
+      ]
+    },
+    {
+      "id": "cat08",
+      "name": "cat08_string_encoding",
+      "case_count": 16,
+      "cases": [
+        {
+          "id": "TC0406",
+          "filename": "cat08_string_encoding/TC0405_latin1_utf8_payload.dcm",
+          "description": "Charset=ISO_IR 100 (Latin-1) but PatientName is UTF-8 multi-byte",
+          "target_tag": "(0008,0005)",
+          "mutation": "latin1_utf8",
+          "severity": "medium",
+          "expected_behavior": "Mojibake or parse error"
+        },
+        {
+          "id": "TC0408",
+          "filename": "cat08_string_encoding/TC0407_utf8_bom_utf16.dcm",
+          "description": "Invalid UTF-8 bytes in PatientName: bom_utf16",
+          "target_tag": "(0010,0010)",
+          "mutation": "utf8_bom_utf16",
+          "severity": "medium",
+          "expected_behavior": "Encoding error or crash"
+        },
+        {
+          "id": "TC0410",
+          "filename": "cat08_string_encoding/TC0409_utf8_surrogate.dcm",
+          "description": "Invalid UTF-8 bytes in PatientName: surrogate",
+          "target_tag": "(0010,0010)",
+          "mutation": "utf8_surrogate",
+          "severity": "medium",
+          "expected_behavior": "Encoding error or crash"
+        },
+        {
+          "id": "TC0412",
+          "filename": "cat08_string_encoding/TC0411_utf8_continuation_no_start.dcm",
+          "description": "Invalid UTF-8 bytes in PatientName: continuation_no_start",
+          "target_tag": "(0010,0010)",
+          "mutation": "utf8_continuation_no_start",
+          "severity": "medium",
+          "expected_behavior": "Encoding error or crash"
+        },
+        {
+          "id": "TC0414",
+          "filename": "cat08_string_encoding/TC0413_utf8_overlong.dcm",
+          "description": "Invalid UTF-8 bytes in PatientName: overlong",
+          "target_tag": "(0010,0010)",
+          "mutation": "utf8_overlong",
+          "severity": "medium",
+          "expected_behavior": "Encoding error or crash"
+        },
+        {
+          "id": "TC0416",
+          "filename": "cat08_string_encoding/TC0415_utf8_null_mid.dcm",
+          "description": "Invalid UTF-8 bytes in PatientName: null_mid",
+          "target_tag": "(0010,0010)",
+          "mutation": "utf8_null_mid",
+          "severity": "medium",
+          "expected_behavior": "Encoding error or crash"
+        },
+        {
+          "id": "TC0418",
+          "filename": "cat08_string_encoding/TC0417_null_b'\\x00FUZZ'.dcm",
+          "description": "Null byte in PatientID LO: start",
+          "target_tag": "(0010,0020)",
+          "mutation": "null_start",
+          "severity": "high",
+          "expected_behavior": "String termination bypass or injection"
+        },
+        {
+          "id": "TC0420",
+          "filename": "cat08_string_encoding/TC0419_null_b'FU\\x00ZZ'.dcm",
+          "description": "Null byte in PatientID LO: mid",
+          "target_tag": "(0010,0020)",
+          "mutation": "null_mid",
+          "severity": "high",
+          "expected_behavior": "String termination bypass or injection"
+        },
+        {
+          "id": "TC0422",
+          "filename": "cat08_string_encoding/TC0421_null_b'FUZZ\\x00'.dcm",
+          "description": "Null byte in PatientID LO: end",
+          "target_tag": "(0010,0020)",
+          "mutation": "null_end",
+          "severity": "high",
+          "expected_behavior": "String termination bypass or injection"
+        },
+        {
+          "id": "TC0424",
+          "filename": "cat08_string_encoding/TC0423_null_b'\\x00\\x00\\x00\\x00'.dcm",
+          "description": "Null byte in PatientID LO: all_null",
+          "target_tag": "(0010,0020)",
+          "mutation": "null_all_null",
+          "severity": "high",
+          "expected_behavior": "String termination bypass or injection"
+        },
+        {
+          "id": "TC0426",
+          "filename": "cat08_string_encoding/TC0425_ctrl_chars.dcm",
+          "description": "Control chars 0x01-0x1F in PatientName",
+          "target_tag": "(0010,0010)",
+          "mutation": "ctrl_chars",
+          "severity": "high",
+          "expected_behavior": "Display corruption or injection"
+        },
+        {
+          "id": "TC0428",
+          "filename": "cat08_string_encoding/TC0427_fmt_printf_n.dcm",
+          "description": "Format string payload in all string fields: %s%s%s%n",
+          "target_tag": "",
+          "mutation": "fmt_printf_n",
+          "severity": "high",
+          "expected_behavior": "Format string exploitation or template injection"
+        },
+        {
+          "id": "TC0430",
+          "filename": "cat08_string_encoding/TC0429_fmt_printf_hex.dcm",
+          "description": "Format string payload in all string fields: %08x.%08x.%08x",
+          "target_tag": "",
+          "mutation": "fmt_printf_hex",
+          "severity": "high",
+          "expected_behavior": "Format string exploitation or template injection"
+        },
+        {
+          "id": "TC0432",
+          "filename": "cat08_string_encoding/TC0431_fmt_template_ssti.dcm",
+          "description": "Format string payload in all string fields: {{7*7}}",
+          "target_tag": "",
+          "mutation": "fmt_template_ssti",
+          "severity": "high",
+          "expected_behavior": "Format string exploitation or template injection"
+        },
+        {
+          "id": "TC0434",
+          "filename": "cat08_string_encoding/TC0433_vm_1000_backslash.dcm",
+          "description": "OtherPatientIDs with 1000 backslash-separated VM components",
+          "target_tag": "(0010,1000)",
+          "mutation": "vm_1000",
+          "severity": "high",
+          "expected_behavior": "VM parsing slowdown or OOM"
+        },
+        {
+          "id": "TC0436",
+          "filename": "cat08_string_encoding/TC0435_rtl_unicode.dcm",
+          "description": "RTL override and zero-width chars in PatientName",
+          "target_tag": "(0010,0010)",
+          "mutation": "rtl_unicode",
+          "severity": "medium",
+          "expected_behavior": "Display confusion"
+        }
+      ]
+    },
+    {
+      "id": "cat09",
+      "name": "cat09_logic_bombs",
+      "case_count": 19,
+      "cases": [
+        {
+          "id": "TC0438",
+          "filename": "cat09_logic_bombs/TC0437_sop_modality_ct_sop_mr_mod.dcm",
+          "description": "CT SOP Class but Modality=MR",
+          "target_tag": "(0008,0060)",
+          "mutation": "sop_mod_ct_sop_mr_mod",
+          "severity": "medium",
+          "expected_behavior": "Accept or reject mismatch"
+        },
+        {
+          "id": "TC0440",
+          "filename": "cat09_logic_bombs/TC0439_sop_modality_ct_sop_us_mod.dcm",
+          "description": "CT SOP Class but Modality=US",
+          "target_tag": "(0008,0060)",
+          "mutation": "sop_mod_ct_sop_us_mod",
+          "severity": "medium",
+          "expected_behavior": "Accept or reject mismatch"
+        },
+        {
+          "id": "TC0442",
+          "filename": "cat09_logic_bombs/TC0441_sop_modality_ct_sop_nm_mod.dcm",
+          "description": "CT SOP Class but Modality=NM",
+          "target_tag": "(0008,0060)",
+          "mutation": "sop_mod_ct_sop_nm_mod",
+          "severity": "medium",
+          "expected_behavior": "Accept or reject mismatch"
+        },
+        {
+          "id": "TC0444",
+          "filename": "cat09_logic_bombs/TC0443_sop_modality_ct_sop_invalid_mod.dcm",
+          "description": "CT SOP Class but Modality=XY",
+          "target_tag": "(0008,0060)",
+          "mutation": "sop_mod_ct_sop_invalid_mod",
+          "severity": "medium",
+          "expected_behavior": "Accept or reject mismatch"
+        },
+        {
+          "id": "TC0446",
+          "filename": "cat09_logic_bombs/TC0445_duplicate_tags.dcm",
+          "description": "PatientName (0010,0010) appears twice in dataset",
+          "target_tag": "(0010,0010)",
+          "mutation": "dup_tag",
+          "severity": "high",
+          "expected_behavior": "Last-wins, first-wins, or crash \u2014 implementation-defined"
+        },
+        {
+          "id": "TC0448",
+          "filename": "cat09_logic_bombs/TC0447_odd_length_pn_3bytes.dcm",
+          "description": "Odd-length value (3 bytes) for PatientName (PN)",
+          "target_tag": "(PatientName)",
+          "mutation": "odd_pn_3bytes",
+          "severity": "medium",
+          "expected_behavior": "Parser padding error or crash"
+        },
+        {
+          "id": "TC0450",
+          "filename": "cat09_logic_bombs/TC0449_odd_length_lo_5bytes.dcm",
+          "description": "Odd-length value (6 bytes) for PatientID (LO)",
+          "target_tag": "(PatientID)",
+          "mutation": "odd_lo_5bytes",
+          "severity": "medium",
+          "expected_behavior": "Parser padding error or crash"
+        },
+        {
+          "id": "TC0452",
+          "filename": "cat09_logic_bombs/TC0451_odd_length_sh_3bytes.dcm",
+          "description": "Odd-length value (3 bytes) for AccessionNumber (SH)",
+          "target_tag": "(AccessionNumber)",
+          "mutation": "odd_sh_3bytes",
+          "severity": "medium",
+          "expected_behavior": "Parser padding error or crash"
+        },
+        {
+          "id": "TC0454",
+          "filename": "cat09_logic_bombs/TC0453_odd_length_cs_1byte.dcm",
+          "description": "Odd-length value (1 bytes) for Modality (CS)",
+          "target_tag": "(Modality)",
+          "mutation": "odd_cs_1byte",
+          "severity": "medium",
+          "expected_behavior": "Parser padding error or crash"
+        },
+        {
+          "id": "TC0456",
+          "filename": "cat09_logic_bombs/TC0455_uid_uid_64chars_exact.dcm",
+          "description": "SOP Instance UID: uid_64chars_exact",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_uid_64chars_exact",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid UID or truncation bug"
+        },
+        {
+          "id": "TC0458",
+          "filename": "cat09_logic_bombs/TC0457_uid_uid_65chars_over.dcm",
+          "description": "SOP Instance UID: uid_65chars_over",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_uid_65chars_over",
+          "severity": "high",
+          "expected_behavior": "Reject invalid UID or truncation bug"
+        },
+        {
+          "id": "TC0460",
+          "filename": "cat09_logic_bombs/TC0459_uid_uid_trailing_dot.dcm",
+          "description": "SOP Instance UID: uid_trailing_dot",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_uid_trailing_dot",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid UID or truncation bug"
+        },
+        {
+          "id": "TC0462",
+          "filename": "cat09_logic_bombs/TC0461_uid_uid_leading_dot.dcm",
+          "description": "SOP Instance UID: uid_leading_dot",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_uid_leading_dot",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid UID or truncation bug"
+        },
+        {
+          "id": "TC0464",
+          "filename": "cat09_logic_bombs/TC0463_uid_uid_double_dot.dcm",
+          "description": "SOP Instance UID: uid_double_dot",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_uid_double_dot",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid UID or truncation bug"
+        },
+        {
+          "id": "TC0466",
+          "filename": "cat09_logic_bombs/TC0465_uid_uid_all_dots.dcm",
+          "description": "SOP Instance UID: uid_all_dots",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_uid_all_dots",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid UID or truncation bug"
+        },
+        {
+          "id": "TC0468",
+          "filename": "cat09_logic_bombs/TC0467_uid_uid_empty.dcm",
+          "description": "SOP Instance UID: uid_empty",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_uid_empty",
+          "severity": "medium",
+          "expected_behavior": "Reject invalid UID or truncation bug"
+        },
+        {
+          "id": "TC0470",
+          "filename": "cat09_logic_bombs/TC0469_group_len_zero.dcm",
+          "description": "Group 0008 Length tag (0008,0000) = 0 (all elements truncated by length)",
+          "target_tag": "(0008,0000)",
+          "mutation": "glen_zero",
+          "severity": "medium",
+          "expected_behavior": "Premature group termination"
+        },
+        {
+          "id": "TC0472",
+          "filename": "cat09_logic_bombs/TC0471_uid_collision.dcm",
+          "description": "SOP Instance UID reused with different pixel data (overwrite test)",
+          "target_tag": "(0008,0018)",
+          "mutation": "uid_collision",
+          "severity": "high",
+          "expected_behavior": "CHECK if PACS silently overwrites existing study"
+        },
+        {
+          "id": "TC0474",
+          "filename": "cat09_logic_bombs/TC0473_nonexistent_ref.dcm",
+          "description": "ReferencedImageSequence points to non-existent SOP Instance UID",
+          "target_tag": "(0008,1140)",
+          "mutation": "nonexistent_ref",
+          "severity": "low",
+          "expected_behavior": "Dangling reference \u2014 accept or warn"
+        }
+      ]
+    },
+    {
+      "id": "cat10",
+      "name": "cat10_cve_2026_3650",
+      "case_count": 117,
+      "cases": [
+        {
+          "id": "TC0476",
+          "filename": "cat10_cve_2026_3650/TC0475_meta_0001_vr_5a5a.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'ZZ'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_5a5a",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0478",
+          "filename": "cat10_cve_2026_3650/TC0477_meta_0001_vr_5858.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'XX'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_5858",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0480",
+          "filename": "cat10_cve_2026_3650/TC0479_meta_0001_vr_4141.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'AA'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_4141",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0482",
+          "filename": "cat10_cve_2026_3650/TC0481_meta_0001_vr_4242.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'BB'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_4242",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0484",
+          "filename": "cat10_cve_2026_3650/TC0483_meta_0001_vr_5151.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'QQ'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_5151",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0486",
+          "filename": "cat10_cve_2026_3650/TC0485_meta_0001_vr_0000.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'\\x00\\x00'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_0000",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0488",
+          "filename": "cat10_cve_2026_3650/TC0487_meta_0001_vr_ffff.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'\\xff\\xff'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_ffff",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0490",
+          "filename": "cat10_cve_2026_3650/TC0489_meta_0001_vr_3939.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'99'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_3939",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0492",
+          "filename": "cat10_cve_2026_3650/TC0491_meta_0001_vr_7371.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'sq'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_7371",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0494",
+          "filename": "cat10_cve_2026_3650/TC0493_meta_0001_vr_6f62.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'ob'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_6f62",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0496",
+          "filename": "cat10_cve_2026_3650/TC0495_meta_0001_vr_7569.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'ui'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_7569",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0498",
+          "filename": "cat10_cve_2026_3650/TC0497_meta_0001_vr_7368.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'sh'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_7368",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0500",
+          "filename": "cat10_cve_2026_3650/TC0499_meta_0001_vr_2055.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b' U'' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_2055",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0502",
+          "filename": "cat10_cve_2026_3650/TC0501_meta_0001_vr_5520.dcm",
+          "description": "File Meta (0002,0001): VR replaced from 'OB' to 'b'U '' (non-standard)",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_single_5520",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0504",
+          "filename": "cat10_cve_2026_3650/TC0503_meta_0002_vr_5a5a.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'ZZ'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_5a5a",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0506",
+          "filename": "cat10_cve_2026_3650/TC0505_meta_0002_vr_5858.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'XX'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_5858",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0508",
+          "filename": "cat10_cve_2026_3650/TC0507_meta_0002_vr_4141.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'AA'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_4141",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0510",
+          "filename": "cat10_cve_2026_3650/TC0509_meta_0002_vr_4242.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'BB'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_4242",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0512",
+          "filename": "cat10_cve_2026_3650/TC0511_meta_0002_vr_5151.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'QQ'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_5151",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0514",
+          "filename": "cat10_cve_2026_3650/TC0513_meta_0002_vr_0000.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'\\x00\\x00'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_0000",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0516",
+          "filename": "cat10_cve_2026_3650/TC0515_meta_0002_vr_ffff.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'\\xff\\xff'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_ffff",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0518",
+          "filename": "cat10_cve_2026_3650/TC0517_meta_0002_vr_3939.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'99'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_3939",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0520",
+          "filename": "cat10_cve_2026_3650/TC0519_meta_0002_vr_7371.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'sq'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_7371",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0522",
+          "filename": "cat10_cve_2026_3650/TC0521_meta_0002_vr_6f62.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'ob'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_6f62",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0524",
+          "filename": "cat10_cve_2026_3650/TC0523_meta_0002_vr_7569.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'ui'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_7569",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0526",
+          "filename": "cat10_cve_2026_3650/TC0525_meta_0002_vr_7368.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'sh'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_7368",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0528",
+          "filename": "cat10_cve_2026_3650/TC0527_meta_0002_vr_2055.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b' U'' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_2055",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0530",
+          "filename": "cat10_cve_2026_3650/TC0529_meta_0002_vr_5520.dcm",
+          "description": "File Meta (0002,0002): VR replaced from 'UI' to 'b'U '' (non-standard)",
+          "target_tag": "(0002,0002)",
+          "mutation": "cve_2026_3650_single_5520",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0532",
+          "filename": "cat10_cve_2026_3650/TC0531_meta_0003_vr_5a5a.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'ZZ'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_5a5a",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0534",
+          "filename": "cat10_cve_2026_3650/TC0533_meta_0003_vr_5858.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'XX'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_5858",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0536",
+          "filename": "cat10_cve_2026_3650/TC0535_meta_0003_vr_4141.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'AA'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_4141",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0538",
+          "filename": "cat10_cve_2026_3650/TC0537_meta_0003_vr_4242.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'BB'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_4242",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0540",
+          "filename": "cat10_cve_2026_3650/TC0539_meta_0003_vr_5151.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'QQ'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_5151",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0542",
+          "filename": "cat10_cve_2026_3650/TC0541_meta_0003_vr_0000.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'\\x00\\x00'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_0000",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0544",
+          "filename": "cat10_cve_2026_3650/TC0543_meta_0003_vr_ffff.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'\\xff\\xff'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_ffff",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0546",
+          "filename": "cat10_cve_2026_3650/TC0545_meta_0003_vr_3939.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'99'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_3939",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0548",
+          "filename": "cat10_cve_2026_3650/TC0547_meta_0003_vr_7371.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'sq'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_7371",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0550",
+          "filename": "cat10_cve_2026_3650/TC0549_meta_0003_vr_6f62.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'ob'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_6f62",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0552",
+          "filename": "cat10_cve_2026_3650/TC0551_meta_0003_vr_7569.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'ui'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_7569",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0554",
+          "filename": "cat10_cve_2026_3650/TC0553_meta_0003_vr_7368.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'sh'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_7368",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0556",
+          "filename": "cat10_cve_2026_3650/TC0555_meta_0003_vr_2055.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b' U'' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_2055",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0558",
+          "filename": "cat10_cve_2026_3650/TC0557_meta_0003_vr_5520.dcm",
+          "description": "File Meta (0002,0003): VR replaced from 'UI' to 'b'U '' (non-standard)",
+          "target_tag": "(0002,0003)",
+          "mutation": "cve_2026_3650_single_5520",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0560",
+          "filename": "cat10_cve_2026_3650/TC0559_meta_0010_vr_5a5a.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'ZZ'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_5a5a",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0562",
+          "filename": "cat10_cve_2026_3650/TC0561_meta_0010_vr_5858.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'XX'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_5858",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0564",
+          "filename": "cat10_cve_2026_3650/TC0563_meta_0010_vr_4141.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'AA'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_4141",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0566",
+          "filename": "cat10_cve_2026_3650/TC0565_meta_0010_vr_4242.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'BB'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_4242",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0568",
+          "filename": "cat10_cve_2026_3650/TC0567_meta_0010_vr_5151.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'QQ'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_5151",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0570",
+          "filename": "cat10_cve_2026_3650/TC0569_meta_0010_vr_0000.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'\\x00\\x00'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_0000",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0572",
+          "filename": "cat10_cve_2026_3650/TC0571_meta_0010_vr_ffff.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'\\xff\\xff'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_ffff",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0574",
+          "filename": "cat10_cve_2026_3650/TC0573_meta_0010_vr_3939.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'99'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_3939",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0576",
+          "filename": "cat10_cve_2026_3650/TC0575_meta_0010_vr_7371.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'sq'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_7371",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0578",
+          "filename": "cat10_cve_2026_3650/TC0577_meta_0010_vr_6f62.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'ob'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_6f62",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0580",
+          "filename": "cat10_cve_2026_3650/TC0579_meta_0010_vr_7569.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'ui'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_7569",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0582",
+          "filename": "cat10_cve_2026_3650/TC0581_meta_0010_vr_7368.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'sh'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_7368",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0584",
+          "filename": "cat10_cve_2026_3650/TC0583_meta_0010_vr_2055.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b' U'' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_2055",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0586",
+          "filename": "cat10_cve_2026_3650/TC0585_meta_0010_vr_5520.dcm",
+          "description": "File Meta (0002,0010): VR replaced from 'UI' to 'b'U '' (non-standard)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_single_5520",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0588",
+          "filename": "cat10_cve_2026_3650/TC0587_meta_0012_vr_5a5a.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'ZZ'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_5a5a",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0590",
+          "filename": "cat10_cve_2026_3650/TC0589_meta_0012_vr_5858.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'XX'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_5858",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0592",
+          "filename": "cat10_cve_2026_3650/TC0591_meta_0012_vr_4141.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'AA'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_4141",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0594",
+          "filename": "cat10_cve_2026_3650/TC0593_meta_0012_vr_4242.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'BB'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_4242",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0596",
+          "filename": "cat10_cve_2026_3650/TC0595_meta_0012_vr_5151.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'QQ'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_5151",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0598",
+          "filename": "cat10_cve_2026_3650/TC0597_meta_0012_vr_0000.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'\\x00\\x00'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_0000",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0600",
+          "filename": "cat10_cve_2026_3650/TC0599_meta_0012_vr_ffff.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'\\xff\\xff'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_ffff",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0602",
+          "filename": "cat10_cve_2026_3650/TC0601_meta_0012_vr_3939.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'99'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_3939",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0604",
+          "filename": "cat10_cve_2026_3650/TC0603_meta_0012_vr_7371.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'sq'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_7371",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0606",
+          "filename": "cat10_cve_2026_3650/TC0605_meta_0012_vr_6f62.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'ob'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_6f62",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0608",
+          "filename": "cat10_cve_2026_3650/TC0607_meta_0012_vr_7569.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'ui'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_7569",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0610",
+          "filename": "cat10_cve_2026_3650/TC0609_meta_0012_vr_7368.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'sh'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_7368",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0612",
+          "filename": "cat10_cve_2026_3650/TC0611_meta_0012_vr_2055.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b' U'' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_2055",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0614",
+          "filename": "cat10_cve_2026_3650/TC0613_meta_0012_vr_5520.dcm",
+          "description": "File Meta (0002,0012): VR replaced from 'UI' to 'b'U '' (non-standard)",
+          "target_tag": "(0002,0012)",
+          "mutation": "cve_2026_3650_single_5520",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0616",
+          "filename": "cat10_cve_2026_3650/TC0615_meta_0013_vr_5a5a.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'ZZ'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_5a5a",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0618",
+          "filename": "cat10_cve_2026_3650/TC0617_meta_0013_vr_5858.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'XX'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_5858",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0620",
+          "filename": "cat10_cve_2026_3650/TC0619_meta_0013_vr_4141.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'AA'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_4141",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0622",
+          "filename": "cat10_cve_2026_3650/TC0621_meta_0013_vr_4242.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'BB'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_4242",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0624",
+          "filename": "cat10_cve_2026_3650/TC0623_meta_0013_vr_5151.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'QQ'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_5151",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0626",
+          "filename": "cat10_cve_2026_3650/TC0625_meta_0013_vr_0000.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'\\x00\\x00'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_0000",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0628",
+          "filename": "cat10_cve_2026_3650/TC0627_meta_0013_vr_ffff.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'\\xff\\xff'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_ffff",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0630",
+          "filename": "cat10_cve_2026_3650/TC0629_meta_0013_vr_3939.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'99'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_3939",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0632",
+          "filename": "cat10_cve_2026_3650/TC0631_meta_0013_vr_7371.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'sq'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_7371",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0634",
+          "filename": "cat10_cve_2026_3650/TC0633_meta_0013_vr_6f62.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'ob'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_6f62",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0636",
+          "filename": "cat10_cve_2026_3650/TC0635_meta_0013_vr_7569.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'ui'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_7569",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0638",
+          "filename": "cat10_cve_2026_3650/TC0637_meta_0013_vr_7368.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'sh'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_7368",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0640",
+          "filename": "cat10_cve_2026_3650/TC0639_meta_0013_vr_2055.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b' U'' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_2055",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0642",
+          "filename": "cat10_cve_2026_3650/TC0641_meta_0013_vr_5520.dcm",
+          "description": "File Meta (0002,0013): VR replaced from 'SH' to 'b'U '' (non-standard)",
+          "target_tag": "(0002,0013)",
+          "mutation": "cve_2026_3650_single_5520",
+          "severity": "high",
+          "expected_behavior": "Memory leak (CVE-2026-3650) or crash during meta parse"
+        },
+        {
+          "id": "TC0644",
+          "filename": "cat10_cve_2026_3650/TC0643_meta_ALL_vr_5a5a.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'ZZ'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_5a5a",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0646",
+          "filename": "cat10_cve_2026_3650/TC0645_meta_ALL_vr_5858.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'XX'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_5858",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0648",
+          "filename": "cat10_cve_2026_3650/TC0647_meta_ALL_vr_4141.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'AA'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_4141",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0650",
+          "filename": "cat10_cve_2026_3650/TC0649_meta_ALL_vr_4242.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'BB'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_4242",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0652",
+          "filename": "cat10_cve_2026_3650/TC0651_meta_ALL_vr_5151.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'QQ'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_5151",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0654",
+          "filename": "cat10_cve_2026_3650/TC0653_meta_ALL_vr_0000.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'\\x00\\x00'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_0000",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0656",
+          "filename": "cat10_cve_2026_3650/TC0655_meta_ALL_vr_ffff.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'\\xff\\xff'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_ffff",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0658",
+          "filename": "cat10_cve_2026_3650/TC0657_meta_ALL_vr_3939.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'99'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_3939",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0660",
+          "filename": "cat10_cve_2026_3650/TC0659_meta_ALL_vr_7371.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'sq'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_7371",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0662",
+          "filename": "cat10_cve_2026_3650/TC0661_meta_ALL_vr_6f62.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'ob'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_6f62",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0664",
+          "filename": "cat10_cve_2026_3650/TC0663_meta_ALL_vr_7569.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'ui'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_7569",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0666",
+          "filename": "cat10_cve_2026_3650/TC0665_meta_ALL_vr_7368.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'sh'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_7368",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0668",
+          "filename": "cat10_cve_2026_3650/TC0667_meta_ALL_vr_2055.dcm",
+          "description": "ALL File Meta VRs replaced with 'b' U'' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_2055",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0670",
+          "filename": "cat10_cve_2026_3650/TC0669_meta_ALL_vr_5520.dcm",
+          "description": "ALL File Meta VRs replaced with 'b'U '' (non-standard)",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_all_5520",
+          "severity": "high",
+          "expected_behavior": "Amplified memory leak (all meta VRs invalid) \u2014 OOM DoS"
+        },
+        {
+          "id": "TC0672",
+          "filename": "cat10_cve_2026_3650/TC0671_meta_ts_vr_5a5a_len_64KB.dcm",
+          "description": "(0002,0010) with VR='b'ZZ'' and declared length=64KB (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_64KB",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 64KB per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0674",
+          "filename": "cat10_cve_2026_3650/TC0673_meta_ts_vr_5a5a_len_1MB.dcm",
+          "description": "(0002,0010) with VR='b'ZZ'' and declared length=1MB (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_1MB",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 1MB per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0676",
+          "filename": "cat10_cve_2026_3650/TC0675_meta_ts_vr_5a5a_len_1GB_declared.dcm",
+          "description": "(0002,0010) with VR='b'ZZ'' and declared length=1GB_declared (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_1GB_declared",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 1GB_declared per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0678",
+          "filename": "cat10_cve_2026_3650/TC0677_meta_ts_vr_0000_len_64KB.dcm",
+          "description": "(0002,0010) with VR='b'\\x00\\x00'' and declared length=64KB (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_64KB",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 64KB per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0680",
+          "filename": "cat10_cve_2026_3650/TC0679_meta_ts_vr_0000_len_1MB.dcm",
+          "description": "(0002,0010) with VR='b'\\x00\\x00'' and declared length=1MB (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_1MB",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 1MB per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0682",
+          "filename": "cat10_cve_2026_3650/TC0681_meta_ts_vr_0000_len_1GB_declared.dcm",
+          "description": "(0002,0010) with VR='b'\\x00\\x00'' and declared length=1GB_declared (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_1GB_declared",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 1GB_declared per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0684",
+          "filename": "cat10_cve_2026_3650/TC0683_meta_ts_vr_ffff_len_64KB.dcm",
+          "description": "(0002,0010) with VR='b'\\xff\\xff'' and declared length=64KB (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_64KB",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 64KB per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0686",
+          "filename": "cat10_cve_2026_3650/TC0685_meta_ts_vr_ffff_len_1MB.dcm",
+          "description": "(0002,0010) with VR='b'\\xff\\xff'' and declared length=1MB (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_1MB",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 1MB per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0688",
+          "filename": "cat10_cve_2026_3650/TC0687_meta_ts_vr_ffff_len_1GB_declared.dcm",
+          "description": "(0002,0010) with VR='b'\\xff\\xff'' and declared length=1GB_declared (leak amplifier)",
+          "target_tag": "(0002,0010)",
+          "mutation": "cve_2026_3650_amp_1GB_declared",
+          "severity": "high",
+          "expected_behavior": "Memory leak amplified to 1GB_declared per parse (CVE-2026-3650 DoS)"
+        },
+        {
+          "id": "TC0690",
+          "filename": "cat10_cve_2026_3650/TC0689_meta_repeat_10_fake_elems.dcm",
+          "description": "10\u00d7 fabricated (0002,00FF) with VR='ZZ' + 256-byte payload injected into File Meta",
+          "target_tag": "(0002,00FF)",
+          "mutation": "cve_2026_3650_repeat_10",
+          "severity": "high",
+          "expected_behavior": "Leak multiplied \u00d710: 2560 bytes leaked (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0692",
+          "filename": "cat10_cve_2026_3650/TC0691_meta_repeat_100_fake_elems.dcm",
+          "description": "100\u00d7 fabricated (0002,00FF) with VR='ZZ' + 256-byte payload injected into File Meta",
+          "target_tag": "(0002,00FF)",
+          "mutation": "cve_2026_3650_repeat_100",
+          "severity": "high",
+          "expected_behavior": "Leak multiplied \u00d7100: 25600 bytes leaked (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0694",
+          "filename": "cat10_cve_2026_3650/TC0693_meta_repeat_1000_fake_elems.dcm",
+          "description": "1000\u00d7 fabricated (0002,00FF) with VR='ZZ' + 256-byte payload injected into File Meta",
+          "target_tag": "(0002,00FF)",
+          "mutation": "cve_2026_3650_repeat_1000",
+          "severity": "high",
+          "expected_behavior": "Leak multiplied \u00d71000: 256000 bytes leaked (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0696",
+          "filename": "cat10_cve_2026_3650/TC0695_meta_mixed_odd_vr_ZZ.dcm",
+          "description": "File Meta: every odd element has VR='ZZ', others valid",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_mixed_odd",
+          "severity": "high",
+          "expected_behavior": "Partial-parse memory leak \u2014 tests error recovery paths (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0698",
+          "filename": "cat10_cve_2026_3650/TC0697_meta_mixed_even_vr_ZZ.dcm",
+          "description": "File Meta: every even element has VR='ZZ', others valid",
+          "target_tag": "(0002,*)",
+          "mutation": "cve_2026_3650_mixed_even",
+          "severity": "high",
+          "expected_behavior": "Partial-parse memory leak \u2014 tests error recovery paths (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0700",
+          "filename": "cat10_cve_2026_3650/TC0699_meta_version_vr_5a5a.dcm",
+          "description": "FileMetaInformationVersion (0002,0001): VR replaced with 'b'ZZ'' \u2014 first VR dispatch in meta parser",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_first_vr_5a5a",
+          "severity": "high",
+          "expected_behavior": "Memory leak on first meta element parse (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0702",
+          "filename": "cat10_cve_2026_3650/TC0701_meta_version_vr_0000.dcm",
+          "description": "FileMetaInformationVersion (0002,0001): VR replaced with 'b'\\x00\\x00'' \u2014 first VR dispatch in meta parser",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_first_vr_0000",
+          "severity": "high",
+          "expected_behavior": "Memory leak on first meta element parse (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0704",
+          "filename": "cat10_cve_2026_3650/TC0703_meta_version_vr_ffff.dcm",
+          "description": "FileMetaInformationVersion (0002,0001): VR replaced with 'b'\\xff\\xff'' \u2014 first VR dispatch in meta parser",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_first_vr_ffff",
+          "severity": "high",
+          "expected_behavior": "Memory leak on first meta element parse (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0706",
+          "filename": "cat10_cve_2026_3650/TC0705_meta_version_vr_5858.dcm",
+          "description": "FileMetaInformationVersion (0002,0001): VR replaced with 'b'XX'' \u2014 first VR dispatch in meta parser",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_first_vr_5858",
+          "severity": "high",
+          "expected_behavior": "Memory leak on first meta element parse (CVE-2026-3650)"
+        },
+        {
+          "id": "TC0708",
+          "filename": "cat10_cve_2026_3650/TC0707_meta_version_vr_3939.dcm",
+          "description": "FileMetaInformationVersion (0002,0001): VR replaced with 'b'99'' \u2014 first VR dispatch in meta parser",
+          "target_tag": "(0002,0001)",
+          "mutation": "cve_2026_3650_first_vr_3939",
+          "severity": "high",
+          "expected_behavior": "Memory leak on first meta element parse (CVE-2026-3650)"
+        }
+      ]
+    }
+  ]
+}

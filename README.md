@@ -1,6 +1,6 @@
 # DICOM Fuzzing Toolkit
 
-A comprehensive fuzzing corpus and toolset for security testing DICOM implementations. The project provides a pre-built corpus of malformed DICOM files and Nmap NSE scripts to deliver them over the network via DIMSE C-STORE, targeting parsing vulnerabilities in PACS servers, DICOM viewers, and medical imaging libraries.
+A comprehensive fuzzing corpus and toolset for security testing DICOM implementations. The project provides a pre-built corpus of malformed DICOM files to deliver them over the network via DIMSE C-STORE, targeting parsing vulnerabilities in PACS servers, DICOM viewers, and medical imaging libraries.
 
 ## Corpus Categories
 

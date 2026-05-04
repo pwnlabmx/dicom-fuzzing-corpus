@@ -104,3 +104,6 @@ Covers **26 CVEs** spanning 8 DICOM products/libraries.
 - [NVD — CVE-2023-33466](https://nvd.nist.gov/vuln/detail/CVE-2023-33466) | [Shielder Blog](https://www.shielder.com/blog/2023/10/cve-2023-33466-exploiting-healthcare-servers-with-polyglot-files/)
 - [NVD — CVE-2025-31946](https://nvd.nist.gov/vuln/detail/CVE-2025-31946)
 - [TXOne: Uncovering New Vulnerabilities in PACS Servers and DICOM Viewers](https://www.txone.com/blog/uncovering-new-vulnerabilities-in-pacs-servers-and-dicom-viewers/)
+
+## Author
+Paulino Calderon

@@ -1,0 +1,10 @@
+--OUTER
+Content-Type: multipart/related; boundary=INNER
+
+--INNER
+Content-Type: application/dicom
+
+stub
+--INNER--
+
+--OUTER--

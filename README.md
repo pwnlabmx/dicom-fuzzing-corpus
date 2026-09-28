@@ -4,7 +4,7 @@
 Covers **35 CVEs** spanning 9 DICOM products/libraries.
 
 A pre-built corpus of malformed DICOM files for security testing DICOM
-implementations — designed to be delivered over the network via DIMSE C-STORE
+implementations designed to be delivered over the network via DIMSE C-STORE
 (or, where noted, DICOMweb STOW-RS), targeting parsing vulnerabilities in PACS
 servers, DICOM viewers, and medical imaging libraries.
 

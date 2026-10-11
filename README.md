@@ -1,17 +1,10 @@
-# DICOM C-STORE Fuzz Corpus
-
-1,755 manifest-indexed test cases across 35 categories (~41 MB on disk).
-Covers **35 CVEs** spanning 9 DICOM products/libraries.
+# DICOM C-STORE Fuzz Corpus v8
 
 A pre-built corpus of malformed DICOM files for security testing DICOM
 implementations designed to be delivered over the network via DIMSE C-STORE
 (or, where noted, DICOMweb STOW-RS), targeting parsing vulnerabilities in PACS
-servers, DICOM viewers, and medical imaging libraries.
-
-Every test case is indexed in [`manifest.json`](manifest.json), which records
-each case's file path (relative to this directory), description, target tag,
-mutation, severity, and expected behavior. A known-good baseline lives in
-[`baseline/`](baseline/).
+servers, DICOM viewers, and medical imaging libraries. 1,758 manifest-indexed test cases across 35 categories (~41 MB on disk).
+Covers **35 CVEs** spanning 9 DICOM products/libraries.
 
 ## Corpus Summary
 
@@ -21,7 +14,7 @@ mutation, severity, and expected behavior. A known-good baseline lives in
 | `cat02_vr_mismatch` | 15 | - | UI-as-LO, US-as-UL, US-as-SS, DA-as-DS, PN-as-OB, OB-as-OW, CS-as-LO, LO-as-UN. Implicit VR cases with binary garbage in PN, 4-byte Rows, all-0xFF date |
 | `cat03_sequence_nesting` | 12 | - | Depth 10/50/100 via pydicom, depth-500 as raw bytes. Wide SQ 1/100/1000 items. Undefined-length SQ, missing delimiters, stray delimiters, SQ containing PixelData, zero-length items |
 | `cat04_pixel_data` | 29 | - | Buffer half/2x/10x/zero/1-byte vs declared dims. Zero Rows/Cols. BitsAllocated/Stored/HighBit inconsistencies. Encapsulated: empty BOT, zero-length fragment, 10K fragments. Photometric mismatch. Multi-frame NFrames=0/999999 |
-| `cat05_transfer_syntax` | 3 | - | Meta declares Explicit but body is Implicit. Corrupt/truncated deflate streams |
+| `cat05_transfer_syntax` | 6 | - | Meta declares Explicit VR LE but body is Implicit VR LE; meta declares LE but body is Explicit VR Big Endian; Deflated TS with corrupt and truncated zlib streams; JPEG Baseline TS with non-JPEG encapsulated pixel data; RLE TS with all-zero segment offsets |
 | `cat06_private_tags` | 14 | - | Valid/invalid private tags, command group in dataset, group 0xFFFF, stray delimiters, tag ordering violation, bulk private elements, shell/SQL/format-string injection payloads |
 | `cat07_file_meta` | 14 | - | No preamble/DICM, 0xFF preamble, 127-byte off-by-one, DICM at wrong offsets, corrupt Group Length, SOP Class mismatch, invalid Transfer Syntax UID, group 0002 in dataset body |
 | `cat08_string_encoding` | 16 | - | Charset/encoding mismatches, invalid UTF-8, null bytes, control chars, format strings, SSTI payloads, 1000-backslash VM, RTL override + zero-width chars |
@@ -130,13 +123,6 @@ C-STORE fuzzer cannot send them. Drive `cat30` `.http` bodies against the STOW-R
 endpoint with curl, and replay `cat34` `.cmd` command groups with a
 command-set-aware DUL sender.
 
-## Contributing
-
-New vulnerability categories, additional CVE coverage, and refreshed test cases
-are welcome. Add a new `catNN_*/` directory of `.dcm` (or `.http`/`.cmd`) cases
-and register each case in [`manifest.json`](manifest.json) so the corpus stays
-fully indexed.
-
 ## References
 
 - [NVD: CVE-2026-3650](https://nvd.nist.gov/vuln/detail/CVE-2026-3650) | [CISA ICSMA-26-083-01](https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-083-01)
@@ -164,6 +150,12 @@ fully indexed.
 - [NVD: CVE-2026-10528](https://nvd.nist.gov/vuln/detail/CVE-2026-10528)
 - [TXOne: Uncovering New Vulnerabilities in PACS Servers and DICOM Viewers](https://www.txone.com/blog/uncovering-new-vulnerabilities-in-pacs-servers-and-dicom-viewers/)
 
-## Author
+## Contributing
 
-Paulino Calderon ([@calderpwn](https://x.com/calderpwn))
+New vulnerability categories, additional CVE coverage, and refreshed test cases
+are welcome. Add a new `catNN_*/` directory of `.dcm` (or `.http`/`.cmd`) cases
+and register each case in [`manifest.json`](manifest.json) so the corpus stays
+fully indexed.
+
+## Author
+Paulino Calderon <paulino@pwnlab.mx>

@@ -1,0 +1,7 @@
+--X
+Content-Type: application/dicom
+Content-Length: 0
+X-Injected: evil
+
+stub
+--X--

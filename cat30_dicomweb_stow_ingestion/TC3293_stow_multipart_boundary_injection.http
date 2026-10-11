@@ -1,0 +1,10 @@
+--X
+Content-Type: application/dicom
+
+DICM
+--X--
+--X
+Content-Type: text/html
+
+<script>
+--X--
